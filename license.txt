@@ -1,0 +1,2 @@
+The license to each utility appears within each source code module
+and is specific to that module.

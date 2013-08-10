@@ -2,19 +2,6 @@
 Encryption utility functions                 rev: 1.1
 ============================
 
-Changes (Most recent first)
--------
-
-9 Sept 2001 - Fixed problem in the MD5 subroutine caused by the "MX"
-              conversion working differently when in UV PRIME/IDEAL
-              account, as it works in a UV PICK account (or on R83 ..etc)
-            - Made similar changes to TEST.BLOWFISH to avoid using the
-              "MX" conversion code.
-            - Made adjustments to use of BITxxx() functions (Universe &
-              Unidata) after discovering that these returned different
-              results on different platforms for some input values
-              (1 or both input values > 0x7fffffff)
-
 Disclaimer
 ----------
 
@@ -36,7 +23,7 @@ Encryption code distribution
 ----------------------------
 
 The encryption utility set is made up of the following 14 items:
-   
+
    README          - This document
    BASE64          - Base64 encoding utility
    CIPHER          - Stream cipher function
@@ -160,7 +147,7 @@ platforms that do not have these intrinsic functions in Basic, there is
 code included to perform these operations. Note that this will be very
 slow! I make no claim that the implementations of these 'longhand' bit
 manipulation functions are optimal.
-    
+
 It may be helpful to look at the ICRYPT utility as an example of core
 subroutine usage. This program can be used to encrypt or decrypt an item.
 For R83 ports, the encrypted item is stored in hex (to avoid 0xFF char
